@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { FullstackInternDeveloperComponent } from './components/fullstack-intern-developer/fullstack-intern-developer.component';
+import { PiloteComponent } from './components/pilote/pilote.component';
+import { MovieComponent } from './components/movie/movie.component';
+const routes: Routes = [
+  {
+    path: 'fullstack-intern-developer',
+    component: FullstackInternDeveloperComponent,
+  },
+  { path: 'pilote', component: PiloteComponent },
+  { path: 'movies', component: MovieComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: [],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

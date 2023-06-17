@@ -1,0 +1,85 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* Réinitialisation des styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style du conteneur principal */
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* Style de la barre de navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 200px;
+  background-color: #ebebeb;
+  padding: 20px;
+}
+
+/* Style du logo */
+h1 {
+  font-size: 24px;
+  color: #006666;
+  margin-bottom: 10px;
+}
+
+/* Style des liens de navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+nav ul li {
+  margin-bottom: 5px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 5px;
+  color: #006666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #009999;
+}
+
+/* Style du sous-menu */
+h3 {
+  font-size: 16px;
+  color: #006666;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style du contenu principal */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style du résultat des routes */
+h4 {
+  font-size: 18px;
+  color: #006666;
+  margin-bottom: 10px;
+}
