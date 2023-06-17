@@ -92,3 +92,6 @@ h4 {
   justify-content: center;
   margin: 20px;
 }
+.cursive {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
