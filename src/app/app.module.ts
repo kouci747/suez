@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,10 +11,13 @@ import { FullstackInternDeveloperComponent } from './components/fullstack-intern
 import { PiloteComponent } from './components/pilote/pilote.component';
 import { MovieComponent } from './components/movie/movie.component';
 
-// const AppRoutes: Routes = [
-//   { path: '', component: AppComponent },
+//pour utiliser Lottie
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
-// ];
+export function playerFactory(): any {
+  return import('lottie-web');
+}
 
 @NgModule({
   declarations: [
@@ -24,7 +28,12 @@ import { MovieComponent } from './components/movie/movie.component';
     PiloteComponent,
     MovieComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    LottieModule.forRoot({ player: playerFactory }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

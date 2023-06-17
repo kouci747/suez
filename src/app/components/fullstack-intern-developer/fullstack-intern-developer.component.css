@@ -1,0 +1,9 @@
+.ng-lottie {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+}
+
+.lottie-container {
+  display: flex;
+}
