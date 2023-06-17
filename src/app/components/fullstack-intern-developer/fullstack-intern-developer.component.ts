@@ -6,7 +6,6 @@ import { AnimationOptions } from 'ngx-lottie';
   templateUrl: './fullstack-intern-developer.component.html',
   styleUrls: ['./fullstack-intern-developer.component.css'],
 })
-// export class FullstackInternDeveloperComponent {}
 export class FullstackInternDeveloperComponent {
   options1: AnimationOptions = {
     path: 'assets/Lotties/firebaseLottie.json',

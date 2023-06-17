@@ -1,1 +1,25 @@
 <p>movie works!</p>
+
+<div *ngIf="response">
+  <h2>Page: {{ response.page }}</h2>
+  <div *ngFor="let result of response.results">
+    <div class="movieContainer">
+      <div class="movie">
+        <div class="movieImage">
+          <img
+            [src]="'https://image.tmdb.org/t/p/w500' + result.poster_path"
+            alt=""
+            height="100px"
+            width="100px"
+          />
+        </div>
+        <div class="movieInfo">
+          <h3>{{ result.original_title }}</h3>
+          <p>popularité {{ result.popularity }}</p>
+          <!-- <p>{{ result.backdrop_path }}</p> -->
+          <!-- Affichez les autres informations selon vos besoins -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
