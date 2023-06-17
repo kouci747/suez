@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #98eecc;
+}

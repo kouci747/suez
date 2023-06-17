@@ -15,6 +15,7 @@ import { MovieComponent } from './components/movie/movie.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { IntroComponent } from './components/intro/intro.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export function playerFactory(): any {
   return import('lottie-web');
@@ -29,6 +30,7 @@ export function playerFactory(): any {
     PiloteComponent,
     MovieComponent,
     IntroComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
