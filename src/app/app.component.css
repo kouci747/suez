@@ -5,18 +5,18 @@
 } */
 
 /* Réinitialisation des styles */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 /* Style du conteneur principal */
 .app {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  background-color: #fff;
+
+  background-color: #fbffdc;
 }
 
 /* Style de la barre de navigation */
@@ -83,4 +83,12 @@ h4 {
   font-size: 18px;
   color: #006666;
   margin-bottom: 10px;
+}
+
+.developperWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }

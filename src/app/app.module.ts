@@ -14,6 +14,7 @@ import { MovieComponent } from './components/movie/movie.component';
 //pour utiliser Lottie
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { IntroComponent } from './components/intro/intro.component';
 
 export function playerFactory(): any {
   return import('lottie-web');
@@ -27,6 +28,7 @@ export function playerFactory(): any {
     FullstackInternDeveloperComponent,
     PiloteComponent,
     MovieComponent,
+    IntroComponent,
   ],
   imports: [
     BrowserModule,
