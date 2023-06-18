@@ -35,3 +35,9 @@
   width: 70%;
   font-size: 20px;
 }
+
+.ng-android {
+  width: 300px;
+  height: 300px;
+  align-items: center;
+}
