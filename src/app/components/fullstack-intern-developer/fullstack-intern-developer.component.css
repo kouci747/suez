@@ -6,6 +6,11 @@
 
 .lottie-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lottie-container:hover {
+  background-color: #f5f0bb;
 }
 
 .screen-container {
@@ -40,4 +45,29 @@
   width: 300px;
   height: 300px;
   align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 55%;
+  width: 55%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.gif {
+  max-width: 70%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.gif-container {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #fbffdc;
+}
+.gif-container:hover {
+  background-color: #f5f0bb;
 }

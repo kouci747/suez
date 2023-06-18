@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  width: 800px; /* Adjust the desired width */
-  height: 150px; /* Adjust the desired height */
+  width: 800px;
+  height: 150px;
 }
 
 .movie {
@@ -19,7 +19,7 @@
 }
 
 .movie:hover {
-  background-color: #f5f0bb; /* Add your desired hover background color */
+  background-color: #f5f0bb;
 }
 
 .movieImage {

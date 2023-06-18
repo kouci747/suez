@@ -1,33 +1,11 @@
-<!-- <div *ngIf="response">
-  <h2>Page: {{ response.page }}</h2>
-  <div *ngFor="let result of response.results">
-    <div class="movieContainer">
-      <div class="movie">
-        <div class="movieImage">
-          <img
-            [src]="'https://image.tmdb.org/t/p/w500' + result.poster_path"
-            alt=""
-            height="100px"
-            width="100px"
-          />
-        </div>
-        <div class="movieInfo">
-          <h3>{{ result.original_title }}</h3>
-          <p>popularité {{ result.popularity }}</p> -->
-<!-- <p>{{ result.backdrop_path }}</p> -->
-<!-- Affichez les autres informations selon vos besoins -->
-<!-- </div>
-      </div>
-    </div>
-  </div>
-  <p>page {{ response.page }}</p>
-</div> -->
 <div *ngIf="response">
   <h2>Résultat de l'appel API</h2>
   <div *ngFor="let result of response.results">
     <div class="movieContainer">
       <div class="movie">
         <div class="movieImage">
+          <!--note à moi-meme: lien trouvé dans la documentation themoviedb-->
+          <!-- result.poster_path : affiche du film, fetchée depuis l'API-->
           <img
             [src]="'https://image.tmdb.org/t/p/w500' + result.poster_path"
             alt=""
@@ -38,14 +16,14 @@
         <div class="movieInfo">
           <h3>{{ result.original_title }}</h3>
           <p>popularité {{ result.popularity }}</p>
-          <!-- Affichez les autres informations selon vos besoins -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- il y'a exactement 500 pages de résultats-->
+  <!-- il y'a exactement 500 pages de résultats, le bouton disparait après la valeur total_pages atteinte-->
   <div class="plus-btn-container" *ngIf="response.page < response.total_pages">
+    <!-- déclenche la fonction qui va incrémenter le numéro de la page actuelle puis taper dans le GET-->
     <button class="plus-btn" (click)="loadMoreMovies()">
       Charger + de films
     </button>

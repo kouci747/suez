@@ -42,4 +42,10 @@ export class FullstackInternDeveloperComponent {
   options11: AnimationOptions = {
     path: 'assets/Lotties/androidLottie.json',
   };
+  options12: AnimationOptions = {
+    path: 'assets/Lotties/jsLottie.json',
+  };
+  options13: AnimationOptions = {
+    path: 'assets/Lotties/dockerLottie.json',
+  };
 }

@@ -12,28 +12,33 @@ export class MovieComponent {
   response: any; // Variable pour stocker la réponse de la requête
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
-    this.fetchData(1); // Fetch movies from the first page initially
+    this.fetchData(1); // au début, on récupère les données de la première page
   }
 
   allMovies: any[] = [];
 
   fetchData(page: number) {
-    // Make the HTTP request to fetch movies from the specified page
+    // Requete HTTP GET pour chercher les films à la page passée en paramètre
     this.http
       .get(`http://localhost:5432/api/v1/movie/getMovie/${page}`)
       .subscribe((data: any) => {
         if (this.response && this.response.results) {
           // concatatenation des résultats : on ajoute les nouveaux résultats aux anciens
+
+          //en react, on aurait fait un spread operator [...this.response.results, ...data.results]
           this.response.results = this.response.results.concat(data.results);
         } else {
-          // Initialize the response with the fetched data
           this.response = data;
         }
+        this.response.page = data.page; // je mets à jour la page courante.
+        console.log('page récupérée: ', this.response.page);
       });
   }
 
   loadMoreMovies() {
-    const nextPage = this.response.page + 1; // Get the next page
-    this.fetchData(nextPage); // Call the fetchData method with the next page number
+    // on récupère la page courante et on l'incrémente pour la requête suivante
+    const nextPage = (this.response.page || 1) + 1;
+    // on appelle la fonction fetchData avec la page suivante
+    this.fetchData(nextPage);
   }
 }

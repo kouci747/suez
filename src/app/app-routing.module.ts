@@ -4,6 +4,8 @@ import { FullstackInternDeveloperComponent } from './components/fullstack-intern
 import { PiloteComponent } from './components/pilote/pilote.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { IntroComponent } from './components/intro/intro.component';
+
+//mettre les routes ici accompagnées de leur component
 const routes: Routes = [
   {
     path: 'fullstack-intern-developer',
